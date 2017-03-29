@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "strictNullChecks": false,
+    "noUnusedLocals": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "lib": [
+      "es2017"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
