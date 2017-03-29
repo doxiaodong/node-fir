@@ -13,7 +13,7 @@ import {
 } from './lib/api'
 
 async function main() {
-  if (!argv.apk) {
+  if (!argv.p) {
     console.log('run `fir -h` for help')
     throw new Error('file path is necessary')
   }
@@ -25,7 +25,7 @@ async function main() {
   const body: IUploadBody = {
     key: binary.key,
     token: binary.token,
-    file: fs.createReadStream(argv.apk),
+    file: fs.createReadStream(argv.p),
     'x:name': argv.n,
     'x:version': argv.v,
     'x:build': argv.b,
