@@ -5,7 +5,7 @@ import * as chalk from 'chalk'
 import './lib/polyfill'
 
 import { argv } from './lib/argv'
-import tokenStore from './lib/token'
+import configStore from './lib/config'
 import {
   getUploadCert,
   upload,
@@ -17,7 +17,7 @@ async function main() {
     console.log('run `fir -h` for help')
     throw new Error('file path is necessary')
   }
-  tokenStore.init(argv.t)
+  configStore.init(argv.c)
 
   const data = await getUploadCert()
 
@@ -26,10 +26,10 @@ async function main() {
     key: binary.key,
     token: binary.token,
     file: fs.createReadStream(argv.p),
-    'x:name': argv.n,
+    'x:name': configStore.config.name,
     'x:version': argv.v,
     'x:build': argv.b,
-    'x:changelog': argv.c
+    'x:changelog': argv.changelog
   }
   const uploadRes = await upload(binary.upload_url, body)
   if (uploadRes.is_completed) {

@@ -1,9 +1,9 @@
 import * as yargs from 'yargs'
 
 export const argv = yargs
-  .option('t', {
-    alias: 'token',
-    describe: 'firm.im api token, should specific when first run, it will be recorded into local config file: $HOME/.fir/config.json'
+  .option('c', {
+    alias: 'config',
+    describe: 'config path, default is: $HOME/.fir/config.json'
   })
   .option('p', {
     alias: 'apkPath',
@@ -11,8 +11,7 @@ export const argv = yargs
   })
   .option('n', {
     alias: 'name',
-    describe: '应用名称',
-    default: '运维宝'
+    describe: '应用名称'
   })
   .option('v', {
     alias: 'version',
@@ -24,7 +23,7 @@ export const argv = yargs
     describe: 'Build 号',
     default: '1'
   })
-  .option('c', {
+  .option('changelog', {
     alias: 'changelog',
     describe: '更新日志',
     default: ''

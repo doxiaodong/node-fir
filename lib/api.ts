@@ -1,13 +1,13 @@
 import * as fs from 'fs'
 import * as request from 'request-promise-native'
-import tokenStore from './token'
+import configStore from './config'
 
 export async function getUploadCert() {
   const data = await request.post('http://api.fir.im/apps', {
     form: {
       type: 'android',
-      bundle_id: 'com.ruffcorp',
-      api_token: tokenStore.token
+      bundle_id: configStore.config.bundle_id,
+      api_token: configStore.config.token
     },
     json: true
   })
