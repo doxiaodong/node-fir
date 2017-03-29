@@ -13,7 +13,8 @@ import {
 } from './lib/api'
 
 async function main() {
-  if (!argv.f) {
+  if (!argv.apk) {
+    console.log('run `fir -h` for help')
     throw new Error('file path is necessary')
   }
   tokenStore.init(argv.t)
