@@ -26,7 +26,7 @@ async function main() {
     key: binary.key,
     token: binary.token,
     file: fs.createReadStream(argv.p),
-    'x:name': configStore.config.name,
+    'x:name': argv.n || configStore.config.name,
     'x:version': argv.v,
     'x:build': argv.b,
     'x:changelog': argv.changelog

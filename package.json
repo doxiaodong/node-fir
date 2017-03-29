@@ -1,6 +1,6 @@
 {
   "name": "node-fir",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "description": "node fir cli",
   "main": "index.js",
   "typings": "index.d.ts",
