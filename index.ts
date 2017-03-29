@@ -24,7 +24,7 @@ async function main() {
   const body: IUploadBody = {
     key: binary.key,
     token: binary.token,
-    file: fs.createReadStream(argv.f),
+    file: fs.createReadStream(argv.apk),
     'x:name': argv.n,
     'x:version': argv.v,
     'x:build': argv.b,

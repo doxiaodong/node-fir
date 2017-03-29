@@ -6,7 +6,7 @@ export const argv = yargs
     describe: 'firm.im api token, should specific when first run, it will be recorded into local config file: $HOME/.fir.im/config.json'
   })
   .option('apk', {
-    alias: 'appPath',
+    alias: 'apkPath',
     describe: 'the absolute path of apk you want to publish to fir.im'
   })
   .option('n', {
