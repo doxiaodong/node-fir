@@ -3,7 +3,7 @@ import * as yargs from 'yargs'
 export const argv = yargs
   .option('t', {
     alias: 'token',
-    describe: 'firm.im api token, should specific when first run, it will be recorded into local config file: $HOME/.fir.im/config.json'
+    describe: 'firm.im api token, should specific when first run, it will be recorded into local config file: $HOME/.fir/config.json'
   })
   .option('apk', {
     alias: 'apkPath',
